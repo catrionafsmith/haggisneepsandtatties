@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Dinners</title>
+</head>
+
+<body>
+    <div>
+    <h1>What's for dinner?</h1>
+    {% dinners %}
+    {% block content %}
+        {% for meal in meals %}
+        <div id="dinner" style="background-image: url({{meals[meal][picture]}});">
+        </div>
+        {% endfor %}
+    {% endblock %}
+    </div>
+</body>
+<style>
+    #dinner {
+      float: left;
+        width: 400px;
+        height: 250px;
+        margin: 10px;
+        border-radius: 7px;
+        box-shadow: 0px 0px 5px grey;
+        background-size: cover;
+    }
+  </style>
+</html>
