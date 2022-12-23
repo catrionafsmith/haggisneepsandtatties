@@ -5,28 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>What's for Dinner?</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&family=Roboto&display=swap" rel="stylesheet">
+    
 </head>
 <body>
-    <h1>Let's eat {{recipe_title}}!</h1>
-    <a href="{{recipe_link}}">{{recipe_link}}</a>
-    <br>
-    <div id="picture" style="background-image: url({{recipe_picture}});">
+    <div class="header">
+        <h1>Let's eat {{recipe_title}}!</h1>
+    </div>
+    
+    <div class="container">
+        <button><a href="{{recipe_link}}">Take me to the recipe!</a></button>
+        <button onClick="window.location.reload();">New Recipe!</button>
+    </div>
+    
+    <div class="pic_container">
+        <div id="picture" style="background-image: url({{recipe_picture}});">
+    </div>
+    
+    <footer>
+        (c) Katy Smith 2022
+    </footer>
 </body>
-<style>
-    h1 {
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-    }
-    p {
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-    }
-    #picture {
-        float: left; 
-        width: 500px;
-        height: 400px;
-        margin: 10px;
-        border-radius: 7px;
-        box-shadow: 0px 0px 5px grey;
-        background-size: cover;
-    }
-  </style>
+
 </html>

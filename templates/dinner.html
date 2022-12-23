@@ -2,28 +2,34 @@
 <html lang="en">
 
 <head>
-    <title>Dinners</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What's for Dinner?</title>
+  <link rel="stylesheet" href="/static/css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <title>Dinners</title>
+  <link rel="stylesheet" href="/static/css/styles.css">
 </head>
 
 <body>
     <div>
-    {% block content %}
-        {% for dinner in dinners %}
-        <div id="dinner" style="background-image: url(https://www.themealdb.com/images/media/meals/wvpsxx1468256321.jpg);">
-        </div>
-        {% endfor %}
-    {% endblock %}
+    <h1>Welcome to Haggis Neeps and Tatties meal idea generator!</h1>
+    <h1><a href="{{url}}">Powered by {{url}}</a></h1>
+    <div class="pic_container">
+      <div id="picture" style="background-image: url(https://images.immediate.co.uk/production/volatile/sites/30/2021/12/Haggis-neeps-and-tatties-b8ad618.jpg?quality=90&webp=true&resize=600,545);">
+    </div>
     </div>
 </body>
 <style>
-    #dinner {
-      float: left;
-        width: 400px;
-        height: 250px;
-        margin: 10px;
-        border-radius: 7px;
-        box-shadow: 0px 0px 5px grey;
-        background-size: cover;
+    body {
+      height: 100vh;
+      background-color: #f4a261;
+      margin: auto;
+      text-align: center;
+      padding: 50px;
+      color: #264653;
     }
   </style>
 </html>
